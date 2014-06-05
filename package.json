@@ -1,0 +1,29 @@
+{
+    "name": "factory-girl-jugglingdb",
+    "version": "0.0.1",
+    "description": "A JugglingDB adapter for factory-girl",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:rehanift/factory-girl-jugglingdb.git"
+    },
+    "keywords": [
+        "factory-girl",
+        "factory",
+        "test",
+        "bdd",
+        "tdd",
+        "fixture"
+    ],
+    "devDependencies":{
+        "factory-girl":"*",
+        "jugglingdb":"*",
+        "mocha":"*",
+        "chai":"*"
+    },
+    "author": "Rehan Iftikhar",
+    "license": "MIT"
+}
