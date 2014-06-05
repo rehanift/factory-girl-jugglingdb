@@ -1,0 +1,24 @@
+* factory-girl-jugglingdb
+
+A [[https://github.com/1602/jugglingdb][JugglingDB]] adapter for [[https://github.com/aexmachina/factory-girl][factory-girl]]
+
+** Usage
+   - Load =factory-girl= and set the adapter     
+     #+BEGIN_SRC javascript
+       var baseFactory = require("factory-girl");
+       var factory = new baseFactory.Factory();
+       var JugglingDbAdapter = require("../").JugglingDbAdapter;
+       factory.setAdapter(JugglingDbAdapter);
+     #+END_SRC
+
+   - Load your JugglingDB model
+     #+BEGIN_SRC javascript
+       var User = require("./resources/User").User;
+     #+END_SRC
+
+   - Define your factories
+     #+BEGIN_SRC javascript
+       factory.define("user", User, {
+           name:"Rudy"
+       });     
+     #+END_SRC
