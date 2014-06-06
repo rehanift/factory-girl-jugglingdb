@@ -5,8 +5,7 @@ A [[https://github.com/1602/jugglingdb][JugglingDB]] adapter for [[https://githu
 ** Usage
    - Load =factory-girl= and set the adapter     
      #+BEGIN_SRC javascript
-       var baseFactory = require("factory-girl");
-       var factory = new baseFactory.Factory();
+       var factory = require("factory-girl");
        var JugglingDbAdapter = require("../").JugglingDbAdapter;
        factory.setAdapter(JugglingDbAdapter);
      #+END_SRC
@@ -21,4 +20,18 @@ A [[https://github.com/1602/jugglingdb][JugglingDB]] adapter for [[https://githu
        factory.define("user", User, {
            name:"Rudy"
        });     
+     #+END_SRC
+
+   - Use your factories
+     #+BEGIN_SRC javascript
+       factory.create("user", function(err, user){
+           // user is a `User' object
+       });
+     #+END_SRC
+
+   - Destroy all factories
+     #+BEGIN_SRC javascript
+       factory.cleanup(function(){
+           // ...
+       });
      #+END_SRC

@@ -1,7 +1,6 @@
 var should = require("chai").should();
 
-var baseFactory = require("factory-girl");
-var factory = new baseFactory.Factory();
+var factory = require("factory-girl");
 var JugglingDbAdapter = require("../").JugglingDbAdapter;
 factory.setAdapter(JugglingDbAdapter);
 
